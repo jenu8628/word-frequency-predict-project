@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="{{ url_for('static', filename='search.css') }}" rel="stylesheet">
+  <title>단어 검색 예측 서비스</title>
+</head>
+<body>
+  <div class="get-search-container">
+    <div class="header">
+      <div class="img-box">
+        <a class="a-btn" href="{{ url_for('main') }}">
+          <img id="img" src="{{ url_for('static', filename='image/danawa.jpg') }}" width="200px" alt="">
+        </a>
+      </div>
+      <div>
+        <a class="a-btn" href="{{ url_for('main') }}">메인으로</a>
+      </div>
+    </div>
+    <div class="box">
+      <h1>단어 검색 빈도수 예측 서비스</h1>
+      <div class="hr"></div>
+      <h4>아래를 모두 작성해 주세요</h4>
+      <form action="{{ url_for('post_searchpage') }}" method="POST" id="data">
+        
+        <select name="day" id="day" class="select-class">
+          <option selected disabled>  -- 요일을 지정해 주세요 --</option>
+          <option value="1">월</option>
+          <option value="2">화</option>
+          <option value="3">수</option>
+          <option value="4">목</option>
+          <option value="5">금</option>
+          <option value="6">토</option>
+          <option value="7">일</option>
+        </select>
+        <p>시간</p>
+        <select name="time" id="time" class="select-class">
+          <option selected disabled>  -- 오전 or 오후 --</option>
+          <option value="0">오전</option>
+          <option value="1">오후</option>
+        </select>
+        <select name="hour" id="hour" class="select-class">
+          <option selected disabled>  -- 시간을 지정해 주세요 --</option>
+          <option value="1">1시</option>
+          <option value="2">2시</option>
+          <option value="3">3시</option>
+          <option value="4">4시</option>
+          <option value="5">5시</option>
+          <option value="6">6시</option>
+          <option value="7">7시</option>
+          <option value="8">8시</option>
+          <option value="9">9시</option>
+          <option value="10">10시</option>
+          <option value="11">11시</option>
+          <option value="12">12시</option>
+        </select>
+        <p>단어</p>
+        <input type="text" id="keyword" name="keyword" class="input-class">
+        <div class="btn-container">
+          <p class="btn" id="submit">예측하기</p>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script>
+    let submit = document.getElementById('submit')
+    submit.onclick = function (){
+      let day = document.getElementById('day').value
+      let time = document.getElementById('time').value
+      let hour = document.getElementById('hour').value
+      let keyword = document.getElementById('keyword').value
+      if (day == '-- 요일을 지정해 주세요 --') {
+        alert('요일을 입력하세요')
+      } else if (time =='-- 오전 or 오후 --'){
+        alert('오전 오후를 지정해주세요')
+      } else if (hour=='-- 시간을 지정해 주세요 --'){
+        alert('시간을 지정해주세요')
+      } else if (keyword==''){
+        alert('단어를 입력해주세요')
+      } else {
+        document.getElementById('data').submit();
+      }
+    }
+  </script>
+</body>
+</html>

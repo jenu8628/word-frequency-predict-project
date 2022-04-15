@@ -1,0 +1,130 @@
+/* GET요청시 css */
+.get-search-container {
+  display: flex;
+	flex-flow: column;
+	align-items: center;
+	margin-top: 10vh;
+}
+
+/* select 클래스 */
+.select-class {
+	transition-duration: 0.5s;
+	width: 100%;
+	height: 2em;
+	font-size: 1em;
+	border-radius: 5px 5px 5px 5px;
+  margin-bottom: 10px;
+  appearance: none;
+  padding-left: 10px;
+}
+
+.select-class option {
+  padding: 20px;
+  border-radius: 5px 5px 5px 5px; 
+}
+
+/* input 클래스 */
+.input-class {
+	/* margin-top: 5px; */
+	width: 100%;
+	border-radius: 3px;
+	transition-duration: 0.3s;
+	font-size: 1.2em;
+}
+
+.input-class:focus {
+	outline:1px solid #9796bb;
+	transition-duration: 0.3s;
+}
+
+
+/* POST 요청시 css */
+.post-search-container{
+  display: flex;
+	flex-flow: column;
+	align-items: center;
+	margin-top: 10vh;
+}
+.box{
+  display: flex;
+	flex-flow: column;
+	align-items: center;
+  width: 80%;
+}
+.graph-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-bottom: 10vh;
+}
+.graph{
+  width: 500px;
+}
+.predict-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: bold;
+  margin-bottom: 50px;
+}
+.predict-box .keyword{
+  font-size: 1.5em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.predict-box .predict{
+  font-size: 1.8em;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+/* 공통 css */
+/* 버튼 클래스 */
+.btn-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.btn-container .btn {
+	transition-duration: 0.2s;
+	font-size: 1.3em;
+	background-color: rgb(255, 255, 255);
+	border-radius: 10px;
+	border: none;
+}
+.btn-container .btn:hover {
+	font-size: 1.5em;
+	cursor: pointer;
+	color: rgb(131, 161, 139);
+}
+.header{
+  position: fixed;
+  top:4vh;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-around; */
+}
+.header .a-btn {
+  margin-left: auto;
+	font-size: 1.3em;
+	background-color: rgb(255, 255, 255);
+	color:black;
+	border-radius: 10px;
+	text-decoration: none;
+  margin-bottom: 10vh;
+}
+.header .img-box {
+  margin-right: auto;
+}
+.header img:hover {
+  cursor: pointer;
+}
+.hr{
+  width: 100%;
+  background-color: black;
+  height: 1px;
+}
+

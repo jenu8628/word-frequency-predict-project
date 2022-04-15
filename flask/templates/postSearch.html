@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="{{ url_for('static', filename='search.css') }}" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body>
+  <div class="post-search-container">
+    <div class="header">
+      <div class="img-box">
+        <a class="a-btn" href="{{ url_for('main') }}">
+          <img id="img" src="{{ url_for('static', filename='image/danawa.jpg') }}" width="200px" alt="">
+        </a>
+      </div>
+      <div>
+        <a class="a-btn" href="{{ url_for('main') }}">메인으로</a>
+      </div>
+    </div>
+    <div class="box">
+      <h1>예측 결과</h1>
+      <div class="predict-box">
+        <div class="keyword">{{ keyword }}는 {{day}}요일 {{time}} {{hour}}시에 </div>
+        <div class="predict">{{ predict }}</div>
+        <div class="keyword">번의 검색이 예상됩니다.</div>
+      </div>
+      <h2>{{ keyword }}의 시간대별 빈도수 추이</h2>
+      <div class="hr"></div>
+      <div class="graph-container">
+        <!-- img list -->
+        
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
